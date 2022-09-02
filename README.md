@@ -14,7 +14,8 @@ Contudo, para atualizar esta planilha para o ano corrente, demandaria esforço m
 
 - [ ] Gerar um calendário atualizado no Notion, caso ainda não exista um. O calendário deverá possuir tags para filtro da rede social;
 - [ ] Criar lista de tipos de conteúdos;
-- [ ] Publicar tipos de conteúdos no calendário, considerando horário de publicação e cores diferentes de acordo com o tipo de conteúdo.
+- [ ] Publicar tipos de conteúdos no calendário, considerando horário de publicação e cores diferentes de acordo com o tipo de conteúdo;
+- [ ] Desenvolver templates para roteiro de conteúdos considerando redes sociais e armazenar sob sessão do calendário, contendo planejamento.
 
 ## Por onde começar
 
@@ -24,10 +25,11 @@ Certifique-se de configurar o seu ambiente com as ferramentas, linguagens e fram
 
 ## Matriz de compatibilidade
 
-| Ferramenta   | Versão suportada |
-|--------------|:----------------:|
-| Docker       |        X.X       |
-| NodeJs       |       X.X.X      |
+| Ferramenta     | Versão suportada |
+|----------------|:----------------:|
+| Docker         |     X.X          |
+| Docker-compose |     X.X          |
+| NodeJs         |     X.X.X        |
 
 ## Configuração
 
