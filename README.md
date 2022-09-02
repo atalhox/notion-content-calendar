@@ -14,8 +14,8 @@ Contudo, para atualizar esta planilha para o ano corrente, demandaria esforço m
 
 - [ ] Gerar um calendário atualizado no Notion, caso ainda não exista um. O calendário deverá possuir tags para filtro da rede social;
 - [ ] Criar lista de tipos de conteúdos;
-- [ ] Publicar tipos de conteúdos no calendário, considerando horário de publicação e cores diferentes de acordo com o tipo de conteúdo;
 - [ ] Desenvolver templates para roteiro de conteúdos considerando redes sociais e armazenar sob sessão do calendário, contendo planejamento.
+- [ ] Publicar tipos de conteúdos no calendário, considerando horário de publicação e cores diferentes de acordo com o tipo de conteúdo. Também deverá ser criado um roteiro do conteúdo sob a sessão do calendário;
 
 ## Por onde começar
 
