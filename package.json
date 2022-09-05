@@ -1,0 +1,30 @@
+{
+  "name": "notion-content-calendar",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A notion client for creating social media content calendar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atalhox/notion-content-calendar.git"
+  },
+  "keywords": [
+    "notion"
+  ],
+  "author": "Luis Felipe Brum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atalhox/notion-content-calendar/issues"
+  },
+  "homepage": "https://github.com/atalhox/notion-content-calendar#readme",
+  "dependencies": {
+    "@notionhq/client": "^2.2.0",
+    "csv-parse": "^5.3.0",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^16.0.2",
+    "path": "^0.12.7"
+  }
+}

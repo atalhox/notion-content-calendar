@@ -1,14 +1,14 @@
 # Notion social media content calendar
 
-Este projeto existe porque existe a necessidade de gerar de forma automatizada um calendário de conteúdos para a publicação em redes sociais. 
+Este projeto existe porque existe a necessidade de gerar de forma automatizada um calendário de conteúdos para a publicação em redes sociais.
 
 Pensando em resolver este problema, o projeto nasceu com o objetivo de criar um aplicativo que consuma a API do Notion para gerar um calendário, atualizado com o ano corrente, considerando uma lista de tipos de conteúdos. Este projeto foi desenvolvido fazendo uso de NodeJs.
 
 ## Objetivos
 
-Gerar um calendário que defina os conteúdos a serem publicados em cada dia da semana surgiu como uma necessidade quando o usuário foi utilizar uma planilha que comprou no passado, contendo o planejamento de conteúdos a serem publicados nas redes sociais. 
+Gerar um calendário que defina os conteúdos a serem publicados em cada dia da semana surgiu como uma necessidade quando o usuário foi utilizar uma planilha que comprou no passado, contendo o planejamento de conteúdos a serem publicados nas redes sociais.
 
-Contudo, para atualizar esta planilha para o ano corrente, demandaria esforço manual do usuário, então foi considerada a criação de um gerador de calendário atualizado, contendo um planejamento de conteúdos para redes sociais. 
+Contudo, para atualizar esta planilha para o ano corrente, demandaria esforço manual do usuário, então foi considerada a criação de um gerador de calendário atualizado, contendo um planejamento de conteúdos para redes sociais.
 
 ## Requisitos de projeto
 
@@ -21,25 +21,25 @@ Contudo, para atualizar esta planilha para o ano corrente, demandaria esforço m
 
 Para que você obtenha uma cópia do projeto em sua máquina local, você poderá fazer uma cópia através de um [clone](https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository).
 
-Certifique-se de configurar o seu ambiente com as ferramentas, linguagens e frameworks utilizados. **Recomenda-se** o uso das versões utilizadas na matriz de compatibilidade. 
+Certifique-se de configurar o seu ambiente com as ferramentas, linguagens e frameworks utilizados. **Recomenda-se** o uso das versões utilizadas na matriz de compatibilidade.
 
 ## Matriz de compatibilidade
 
 | Ferramenta     | Versão suportada |
-|----------------|:----------------:|
-| Docker         |     X.X          |
-| Docker-compose |     X.X          |
-| NodeJs         |     X.X.X        |
+| -------------- | :--------------: |
+| Docker         |       X.X        |
+| Docker-compose |       X.X        |
+| NodeJs         |      X.X.X       |
 
 ## Configuração
 
 ### Obtendo configurações do Notion
 
-#### Etapa 1: Criar uma integração.
+#### Etapa 1: Criar uma integração
 
-1. Acesse https://www.notion.com/my-integrations.
+1. Acesse <https://www.notion.com/my-integrations>.
 2. Clique no botão "+ New integration".
-3. Dê um nome à sua integração. 
+3. Dê um nome à sua integração.
 4. Selecione a área de trabalho na qual deseja instalar essa integração.
 5. Selecione os recursos que sua integração terá.
 6. Clique em "Send" para criar a integração.
@@ -59,16 +59,16 @@ Se você estiver usando o aplicativo de desktop Notion, clique no botão *Share*
 
 O ID do banco de dados é a parte da URL após o nome do seu *workspace* (se você tiver um) e antes do ponto de interrogação (?). O ID tem 32 caracteres, contendo números e letras. Copie o ID e cole-o em algum lugar que você possa encontrar facilmente mais tarde.
 
-Exemplo: 
->https://www.notion.so/myworkspace/a8aec43384f447ed84390e8e42c2e089?v=...
->                                 
+Exemplo:
+><https://www.notion.so/myworkspace/a8aec43384f447ed84390e8e42c2e089?v>=...
+>
 >                                 |--------- Database ID ----------|
 
 ### Configurando ambiente
 
 Configure o arquivo .env conforme abaixo.
 
-```environment
+```dotenv
 NOTION_KEY=sua_secret
 NOTION_DATABASE_ID=seu_database_id
 ```
@@ -114,12 +114,12 @@ Eu sou o Luis Felipe Brum, desenvolvedor Backend, com experiência em segurança
   
 ## Colaboradores
 
-| Colaborador   | Github |
-|--------------|:----------------:|
+| Colaborador      |                Github                 |
+| ---------------- | :-----------------------------------: |
 | Luis Felipe Brum | [atalhox](https://github.com/atalhox) |
 
 ## 🎁 Expressões de gratidão
 
-* Conte a outras pessoas sobre este projeto 📢
-* Convide alguém da equipe para uma cerveja 🍺
-* Agradecer publicamente 🤓.
+- Conte a outras pessoas sobre este projeto 📢
+- Convide alguém da equipe para uma cerveja 🍺
+- Agradecer publicamente 🤓.
