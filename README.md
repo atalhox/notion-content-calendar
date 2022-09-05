@@ -1,45 +1,51 @@
 # Notion social media content calendar
 
-Este projeto existe porque existe a necessidade de gerar de forma automatizada um calendário de conteúdos para a publicação em redes sociais.
+Este projeto existe porque existe a necessidade de gerar de forma automatizada um calendário de conteúdos para a publicação em redes sociais. 
 
 Pensando em resolver este problema, o projeto nasceu com o objetivo de criar um aplicativo que consuma a API do Notion para gerar um calendário, atualizado com o ano corrente, considerando uma lista de tipos de conteúdos. Este projeto foi desenvolvido fazendo uso de NodeJs.
 
 ## Objetivos
 
-Gerar um calendário que defina os conteúdos a serem publicados em cada dia da semana surgiu como uma necessidade quando o usuário foi utilizar uma planilha que comprou no passado, contendo o planejamento de conteúdos a serem publicados nas redes sociais.
+Gerar um calendário que defina os conteúdos a serem publicados em cada dia da semana surgiu como uma necessidade quando o usuário foi utilizar uma planilha que comprou no passado, contendo o planejamento de conteúdos a serem publicados nas redes sociais. 
 
-Contudo, para atualizar esta planilha para o ano corrente, demandaria esforço manual do usuário, então foi considerada a criação de um gerador de calendário atualizado, contendo um planejamento de conteúdos para redes sociais.
+Contudo, para atualizar esta planilha para o ano corrente, demandaria esforço manual do usuário, então foi considerada a criação de um gerador de calendário atualizado, contendo um planejamento de conteúdos para redes sociais. 
 
 ## Requisitos de projeto
 
-- [ ] Gerar um calendário atualizado no Notion, caso ainda não exista um. O calendário deverá possuir tags para filtro da rede social;
-- [ ] Criar lista de tipos de conteúdos, contendo planejamentos diferentes para datas específicas e feriados;
-- [ ] Desenvolver templates para roteiro de conteúdos considerando redes sociais e armazenar sob sessão do calendário, contendo planejamento.
-- [ ] Publicar tipos de conteúdos no calendário, considerando horário de publicação e cores diferentes de acordo com o tipo de conteúdo. Também deverá ser criado um roteiro do conteúdo sob a sessão do calendário;
+- [X] Gerar um calendário para o ano corrente no Notion. O calendário deverá possuir informações sobre o tipo de conteúdo, redes sociais e data de publicação;
+- [X] Consumir arquivo contendo recomendações de conteúdos para redes sociais;
+- [X] Popular calendário com conteúdos;
+
+## Possíveis evoluções
+
+As seguintes funcionalidades ainda poderão ser implementadas:
+- [ ] Validar se o calendário já está populado dia/data antes de publicar;
+- [ ] Adicionar melhores horários para publicação com base no tipo de conteúdo;
+- [ ] Disponibilizar diferentes conteúdos para datas festivas e feriados.
 
 ## Por onde começar
 
 Para que você obtenha uma cópia do projeto em sua máquina local, você poderá fazer uma cópia através de um [clone](https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository).
 
-Certifique-se de configurar o seu ambiente com as ferramentas, linguagens e frameworks utilizados. **Recomenda-se** o uso das versões utilizadas na matriz de compatibilidade.
+Certifique-se de configurar o seu ambiente com as ferramentas, linguagens e frameworks utilizados. **Recomenda-se** o uso das versões utilizadas na matriz de compatibilidade. 
 
 ## Matriz de compatibilidade
 
 | Ferramenta     | Versão suportada |
-| -------------- | :--------------: |
-| Docker         |       X.X        |
-| Docker-compose |       X.X        |
-| NodeJs         |      X.X.X       |
+|----------------|:----------------:|
+| Docker         |     X.X          |
+| Docker-compose |     X.X          |
+| NodeJs         |     X.X.X        |
 
 ## Configuração
 
 ### Obtendo configurações do Notion
 
-#### Etapa 1: Criar uma integração
+#### Etapa 1: Criar uma integração.
 
-1. Acesse <https://www.notion.com/my-integrations>.
+1. Acesse https://www.notion.com/my-integrations.
 2. Clique no botão "+ New integration".
-3. Dê um nome à sua integração.
+3. Dê um nome à sua integração. 
 4. Selecione a área de trabalho na qual deseja instalar essa integração.
 5. Selecione os recursos que sua integração terá.
 6. Clique em "Send" para criar a integração.
@@ -59,26 +65,41 @@ Se você estiver usando o aplicativo de desktop Notion, clique no botão *Share*
 
 O ID do banco de dados é a parte da URL após o nome do seu *workspace* (se você tiver um) e antes do ponto de interrogação (?). O ID tem 32 caracteres, contendo números e letras. Copie o ID e cole-o em algum lugar que você possa encontrar facilmente mais tarde.
 
-Exemplo:
-><https://www.notion.so/myworkspace/a8aec43384f447ed84390e8e42c2e089?v>=...
->
+Exemplo: 
+>https://www.notion.so/myworkspace/a8aec43384f447ed84390e8e42c2e089?v=...
+>                                 
 >                                 |--------- Database ID ----------|
+
+#### Etapa 3 - Configurando as colunas do banco
+
+Neste momento, é necessário configurar as colunas manualmente no banco de dados do notion. Para este projeto foram consideradas as colunas: 
+
+1. Conteudo
+2. Categoria
+3. Redes sociais
+4. Dia
+
+> Como futura evolução, recomenda-se extrair estas informações de variáveis de ambiente.
 
 ### Configurando ambiente
 
 Configure o arquivo .env conforme abaixo.
 
-```dotenv
+```environment
 NOTION_KEY=sua_secret
 NOTION_DATABASE_ID=seu_database_id
 ```
+
+### Configurando a base de dados
+
+As recomendações de conteúdos se encontram na base de dados em "/data/contents.csv". fique à vontade para inserir mais conteúdos se sentir necessário. 
 
 ## Uso da aplicação
 
 Para rodar a aplicação, execute o comando abaixo em um terminal:
 
 ```powershell
-TO-DO
+node index.js
 ```
 
 ## Testes automatizados
@@ -88,14 +109,6 @@ Execute o comando abaixo em um terminal:
 ```powershell
 TO-DO
 ```
-
-## To-do
-
-As seguintes funcionalidades ainda poderão ser implementadas:
-
-- [ ] Gerar um calendário atualizado no Notion, caso ainda não exista um. O calendário deverá possuir tags para filtro da rede social;
-- [ ] Criar lista de tipos de conteúdos;
-- [ ] Publicar tipos de conteúdos no calendário, considerando horário de publicação e cores diferentes de acordo com o tipo de conteúdo.
 
 ## Como colaborar
 
@@ -114,12 +127,12 @@ Eu sou o Luis Felipe Brum, desenvolvedor Backend, com experiência em segurança
   
 ## Colaboradores
 
-| Colaborador      |                Github                 |
-| ---------------- | :-----------------------------------: |
+| Colaborador   | Github |
+|--------------|:----------------:|
 | Luis Felipe Brum | [atalhox](https://github.com/atalhox) |
 
 ## 🎁 Expressões de gratidão
 
-- Conte a outras pessoas sobre este projeto 📢
-- Convide alguém da equipe para uma cerveja 🍺
-- Agradecer publicamente 🤓.
+* Conte a outras pessoas sobre este projeto 📢
+* Convide alguém da equipe para uma cerveja 🍺
+* Agradecer publicamente 🤓.
