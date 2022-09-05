@@ -12,10 +12,16 @@ Contudo, para atualizar esta planilha para o ano corrente, demandaria esforço m
 
 ## Requisitos de projeto
 
-- [ ] Gerar um calendário atualizado no Notion, caso ainda não exista um. O calendário deverá possuir tags para filtro da rede social;
-- [ ] Criar lista de tipos de conteúdos, contendo planejamentos diferentes para datas específicas e feriados;
-- [ ] Desenvolver templates para roteiro de conteúdos considerando redes sociais e armazenar sob sessão do calendário, contendo planejamento.
-- [ ] Publicar tipos de conteúdos no calendário, considerando horário de publicação e cores diferentes de acordo com o tipo de conteúdo. Também deverá ser criado um roteiro do conteúdo sob a sessão do calendário;
+- [X] Gerar um calendário para o ano corrente no Notion. O calendário deverá possuir informações sobre o tipo de conteúdo, redes sociais e data de publicação;
+- [X] Consumir arquivo contendo recomendações de conteúdos para redes sociais;
+- [X] Popular calendário com conteúdos;
+
+## Possíveis evoluções
+
+As seguintes funcionalidades ainda poderão ser implementadas:
+- [ ] Validar se o calendário já está populado dia/data antes de publicar;
+- [ ] Adicionar melhores horários para publicação com base no tipo de conteúdo;
+- [ ] Disponibilizar diferentes conteúdos para datas festivas e feriados.
 
 ## Por onde começar
 
@@ -64,6 +70,17 @@ Exemplo:
 >                                 
 >                                 |--------- Database ID ----------|
 
+#### Etapa 3 - Configurando as colunas do banco
+
+Neste momento, é necessário configurar as colunas manualmente no banco de dados do notion. Para este projeto foram consideradas as colunas: 
+
+1. Conteudo
+2. Categoria
+3. Redes sociais
+4. Dia
+
+> Como futura evolução, recomenda-se extrair estas informações de variáveis de ambiente.
+
 ### Configurando ambiente
 
 Configure o arquivo .env conforme abaixo.
@@ -73,12 +90,16 @@ NOTION_KEY=sua_secret
 NOTION_DATABASE_ID=seu_database_id
 ```
 
+### Configurando a base de dados
+
+As recomendações de conteúdos se encontram na base de dados em "/data/contents.csv". fique à vontade para inserir mais conteúdos se sentir necessário. 
+
 ## Uso da aplicação
 
 Para rodar a aplicação, execute o comando abaixo em um terminal:
 
 ```powershell
-TO-DO
+node index.js
 ```
 
 ## Testes automatizados
@@ -88,14 +109,6 @@ Execute o comando abaixo em um terminal:
 ```powershell
 TO-DO
 ```
-
-## To-do
-
-As seguintes funcionalidades ainda poderão ser implementadas:
-
-- [ ] Gerar um calendário atualizado no Notion, caso ainda não exista um. O calendário deverá possuir tags para filtro da rede social;
-- [ ] Criar lista de tipos de conteúdos;
-- [ ] Publicar tipos de conteúdos no calendário, considerando horário de publicação e cores diferentes de acordo com o tipo de conteúdo.
 
 ## Como colaborar
 
