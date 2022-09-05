@@ -33,6 +33,36 @@ Certifique-se de configurar o seu ambiente com as ferramentas, linguagens e fram
 
 ## Configuração
 
+### Obtendo configurações do Notion
+
+#### Etapa 1: Criar uma integração.
+
+1. Acesse https://www.notion.com/my-integrations.
+2. Clique no botão "+ New integration".
+3. Dê um nome à sua integração. 
+4. Selecione a área de trabalho na qual deseja instalar essa integração.
+5. Selecione os recursos que sua integração terá.
+6. Clique em "Send" para criar a integração.
+7. Copie o "Internal Integration Token" na próxima página e salve-o em algum lugar seguro, por exemplo um gerenciador de senhas.
+
+#### Etapa 2 - Configurando o banco de dados
+
+Inicialmente, as integrações não têm acesso a nenhuma página (ou banco de dados) no espaço de trabalho. Um usuário deve compartilhar páginas específicas com uma integração para que essas páginas sejam acessadas usando a API. Isso ajuda a manter você e as informações de sua equipe no Notion seguras.
+
+Comece a partir de uma página nova ou existente em seu espaço de trabalho. Insira um novo banco de dados digitando */database* e selecionando uma tabela *full page*. Dê um título à tabela. Clique no botão *Share* e use o seletor para encontrar sua integração pelo nome e clique em *Invite*.
+
+Sua integração agora tem as permissões solicitadas no novo banco de dados. Depois que uma integração é adicionada a um espaço de trabalho, qualquer membro pode compartilhar páginas e bancos de dados com essa integração - não há necessidade de ser um admin para esta etapa.
+
+Antes de prosseguir, você precisa do ID do banco de dados que acabou de criar. Copie o URL do seu banco de dados Notion. Verifique se você está visualizando o banco de dados como uma página inteira se estiver usando um inline database.
+
+Se você estiver usando o aplicativo de desktop Notion, clique no botão *Share* e selecione *Copy Link*.
+
+O ID do banco de dados é a parte da URL após o nome do seu *workspace* (se você tiver um) e antes do ponto de interrogação (?). O ID tem 32 caracteres, contendo números e letras. Copie o ID e cole-o em algum lugar que você possa encontrar facilmente mais tarde.
+
+Exemplo: 
+>https://www.notion.so/myworkspace/a8aec43384f447ed84390e8e42c2e089?v=...
+>                                 |--------- Database ID ----------|
+
 ### Configurando ambiente
 
 Configure o arquivo .env conforme abaixo. Para mais detalhes, verifique a pasta do projeto.
