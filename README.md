@@ -61,14 +61,16 @@ O ID do banco de dados é a parte da URL após o nome do seu *workspace* (se voc
 
 Exemplo: 
 >https://www.notion.so/myworkspace/a8aec43384f447ed84390e8e42c2e089?v=...
+>                                 
 >                                 |--------- Database ID ----------|
 
 ### Configurando ambiente
 
-Configure o arquivo .env conforme abaixo. Para mais detalhes, verifique a pasta do projeto.
+Configure o arquivo .env conforme abaixo.
 
-```javascript
-TO-DO
+```environment
+NOTION_KEY=sua_secret
+NOTION_DATABASE_ID=seu_database_id
 ```
 
 ## Uso da aplicação
