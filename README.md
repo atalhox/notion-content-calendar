@@ -133,6 +133,6 @@ Eu sou o Luis Felipe Brum, desenvolvedor Backend, com experiência em segurança
 
 ## 🎁 Expressões de gratidão
 
-* Conte a outras pessoas sobre este projeto 📢
-* Convide alguém da equipe para uma cerveja 🍺
-* Agradecer publicamente 🤓.
+- Conte a outras pessoas sobre este projeto 📢
+- Convide alguém da equipe para uma cerveja 🍺
+- Agradecer publicamente 🤓.
