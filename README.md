@@ -33,19 +33,17 @@ Certifique-se de configurar o seu ambiente com as ferramentas, linguagens e fram
 
 | Ferramenta     | Versão suportada |
 |----------------|:----------------:|
-| Docker         |     X.X          |
-| Docker-compose |     X.X          |
-| NodeJs         |     X.X.X        |
+| NodeJs         |     16.17.0      |
 
 ## Configuração
 
 ### Obtendo configurações do Notion
 
-#### Etapa 1: Criar uma integração.
+#### Etapa 1: Criar uma integração
 
-1. Acesse https://www.notion.com/my-integrations.
+1. Acesse <https://www.notion.com/my-integrations>.
 2. Clique no botão "+ New integration".
-3. Dê um nome à sua integração. 
+3. Dê um nome à sua integração.
 4. Selecione a área de trabalho na qual deseja instalar essa integração.
 5. Selecione os recursos que sua integração terá.
 6. Clique em "Send" para criar a integração.

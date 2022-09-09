@@ -19,11 +19,11 @@ const notion = new Client({ auth: process.env.NOTION_KEY });
 const databaseId = process.env.NOTION_DATABASE_ID;
 
 function getCurrentYearCalendar(year) {
-  var lastDay = new Date(year, 11, 31);
-  var firstDay = new Date(year, 0, 1);
+  let lastDay = new Date(year, 11, 31);
+  let firstDay = new Date(year, 0, 1);
 
-  var daysOfYear = [];
-  for (var date = firstDay; date <= lastDay; date.setDate(date.getDate() + 1)) {
+  let daysOfYear = [];
+  for (let date = firstDay; date <= lastDay; date.setDate(date.getDate() + 1)) {
     daysOfYear.push(new Date(date));
   }
   return daysOfYear;
@@ -91,9 +91,14 @@ async function main() {
 
   daysOfYear.forEach((day) => {
     try {
-      let contentId = getRandomNumber(1, contentsData.length - 1);
-      let content = contentsData[contentId];
-      addItem(content, day);
+      let publishScheduleHour = 9
+      for (let i = 0; i < 4 ; i++) {
+        let contentId = getRandomNumber(1, contentsData.length - 1);
+        let content = contentsData[contentId];
+        day.setHours(publishScheduleHour);
+        addItem(content, day);
+        publishScheduleHour = publishScheduleHour + 3
+      }
     } catch (error) {
       console.error(error);
     }
